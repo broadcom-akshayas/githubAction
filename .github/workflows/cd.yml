@@ -1,6 +1,12 @@
 name: 'Deploy'
-on: ['push']
 
+on:
+  push:    
+    branches:
+      - master
+    paths-ignore:
+      - '**.md'    
+    
 jobs:
   deployment:
     runs-on: 'ubuntu-latest'
